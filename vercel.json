@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "api/*.py", "use": "@vercel/python" }
+    ],
+    "routes": [
+      { "src": "/DexFiles/(.*)", "dest": "/api/file_server.py" },
+      { "src": "/JarFiles/(.*)", "dest": "/api/file_server.py" },
+      { "src": "/SmaliFiles/(.*)", "dest": "/api/file_server.py" },
+      { "src": "/api/(.*)", "dest": "/api/$1" }
+    ]
+  }
+  
